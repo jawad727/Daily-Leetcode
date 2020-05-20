@@ -19,8 +19,6 @@ var generate = function(numRows) {
             else {
                 startingArr[i].push(1)
             }
-            
-
         }
         arrNum += 1
     }
