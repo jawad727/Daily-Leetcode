@@ -1,4 +1,4 @@
-
+// Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/submissions/
 
 var removeDuplicates = function(nums) {
     var obj = {}
@@ -14,3 +14,19 @@ var removeDuplicates = function(nums) {
 
     return nums.length
 };
+
+// Better Solution V V V
+
+var removeDuplicates = function(nums) {
+    let i = 0;
+    let j = 1;
+  
+    for (; j<nums.length; j++) {
+      if (nums[j] !== nums[i]) {
+        i += 1;
+        nums[i] = nums[j];
+      }
+    }
+  
+    return i + 1;
+  };
